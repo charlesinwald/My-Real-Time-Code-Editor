@@ -1,0 +1,53 @@
+.code-text {
+  color: white;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: row; /* Changed to row */
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.code-inputs {
+  display: flex;
+  flex-direction: column; /* Stack HTML and CSS editors vertically */
+  width: 60%; /* Adjust the width as needed */
+  height: 100%;
+}
+
+.html-editor,
+.css-editor {
+  flex: 1; /* Each editor takes equal space */
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  resize: vertical;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.preview-pane {
+  width: 40%; /* Adjust the width as needed */
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: white;
+  overflow: auto;
+}
+
+/* Responsive design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .editor-container {
+    flex-direction: column;
+  }
+
+  .code-inputs, .preview-pane {
+    width: 100%;
+  }
+}
